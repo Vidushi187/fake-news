@@ -17,15 +17,12 @@ from sklearn.metrics import accuracy_score, confusion_matrix
 
 
 #reading data
-#os.chdir('C:\Users\vidus\Documents\Masters carleton\winter 2020\python\machine learning\fake news')
 
 
-df=pd.read_csv("C:/Users/vidus/Documents/Masters carleton/winter 2020/python/machine learning/fake news/news.csv")
 
-#getting shape and head
+df=pd.read_csv("path/news.csv")
 
-#print(df.shape)
-#print(df.head())
+
 
 #getting labels
 
@@ -33,7 +30,7 @@ labels=df.label
 
 #rename that one column
 df=df.rename(columns={"Unnamed: 0":'ID'})
-#print(df.columns)
+
 
 
 #Split the dataset
@@ -63,7 +60,7 @@ pac.fit(tfidf_train,y_train)
 
 
 
-#DataFlair - Predict on the test set and calculate accuracy
+#Predict on the test set and calculate accuracy
 
 
 y_pred=pac.predict(tfidf_test)
